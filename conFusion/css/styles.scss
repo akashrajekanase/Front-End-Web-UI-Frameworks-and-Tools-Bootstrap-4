@@ -76,8 +76,10 @@ body {
     color: floralwhite;
 }
 
-.modal-header .close {
-    color: floralwhite;
+.modal-header {
+    .close {
+        color: floralwhite;
+    }
 }
 
 .modal-body,
