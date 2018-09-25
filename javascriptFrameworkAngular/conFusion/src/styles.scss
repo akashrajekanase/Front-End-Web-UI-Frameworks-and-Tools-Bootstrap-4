@@ -13,6 +13,7 @@ $accent-color: #FFC107;
 $primary-text-color: #212121;
 $secondary-text-color: #757575;
 $divider-color: #BDBDBD;
+$background-moredark: #4527A0;
 @mixin zero-margin($pad-up-down, $pad-left-right) {
     margin: 0px auto;
     padding: $pad-up-down $pad-left-right;
@@ -44,4 +45,8 @@ body {
 
 .flex-spacer {
     flex: 1 1 auto;
+}
+
+.active {
+    background: $background-moredark;
 }
