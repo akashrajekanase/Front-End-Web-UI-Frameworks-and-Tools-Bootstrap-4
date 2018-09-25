@@ -6,16 +6,21 @@
             <hr>
         </div>
     </div>
-    <mat-list fxFlex>
-        <mat-list-item *ngFor="let dish of dishes">
-            <img matListAvatar src={{dish.image}} alt={{dish.name}}>
-            <h1 matLine> {{dish.name}} </h1>
-            <p matLine>
-                <span> {{dish.description}} </span>
-            </p>
-        </mat-list-item>
-    </mat-list>
-    <app-dishdetail></app-dishdetail>
+    <mat-grid-list cols="2" rowHeight="200px">
+        <mat-grid-tile *ngFor="let dish of dishes" (click)="onSelect(dish)" [colspan]="1">
+            <img height="200px" matListAvatar src={{dish.image}} alt={{dish.name}}>
+            <mat-grid-tile-footer>
+                <h1> {{ dish.name | uppercase }} </h1>
+                <!--
+                <p>
+                    <span> {{dish.description}} </span>
+                </p>
+            -->
+            </mat-grid-tile-footer>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+    <app-dishdetail [dish]="selectedDish"></app-dishdetail>
 
 
 </div>
